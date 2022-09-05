@@ -1,0 +1,315 @@
+{
+    "openapi": "3.0.3",
+    "info": {
+      "title": "BO Category",
+      "version": "v1",
+      "description": "BO Alfagift Services Category"
+    },
+    "servers": [
+      {
+        "url": "http://10.25.4.13:8083/v1/product/category",
+        "description": "Staging Environment BO Alfagift"
+      }
+    ],
+    "paths": {
+        "/get": {
+            "get": {
+                "parameters": [
+                    {
+                    "$ref": "#/components/parameters/Content-Type"
+                    },
+                    {
+                        "in" :"query",
+                        "name": "level",
+                        "schema" : {
+                            "type": "integer"
+                        },
+                        "description": "Get Category Level"
+                    },
+                    {
+                        "in" :"query",
+                        "name": "parent_id",
+                        "schema" : {
+                            "type": "integer"
+                        },
+                        "description": "Get Category List"
+                    },
+                    {
+                        "in" :"query",
+                        "name": "id",
+                        "schema" : {
+                            "type": "integer"
+                        },
+                        "description": "Get Category Detail"
+                    }
+                ],
+                "tags": [
+                    "BO Product Main Category"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "examples": {
+                                    "Success_level": {
+                                    "value": {
+                                        "message": "Success",
+                                        "status": 1,
+                                        "data": [
+                                            {
+                                                "categoryId": "5e6b05bfd7c06324be9393e4",
+                                                "categoryName": "HAND SANITIZER",
+                                                "categoryLevel": 0,
+                                                "categoryImage": null,
+                                                "categoryImageFileName": "pm_category_200313_9cpV.png",
+                                                "parentId": null,
+                                                "status": 26,
+                                                "createdBy": null,
+                                                "updatedBy": 1157445,
+                                                "createdAt": "Fri Mar 13 11:02:07 WIB 2020",
+                                                "updatedAt": "Fri Mar 13 11:19:53 WIB 2020",
+                                                "category": null,
+                                                "subCategory": null,
+                                                "createdByMail": "saiful.fahmi@alfacart.com",
+                                                "updatedByMail": "saiful.fahmi@alfacart.com"
+                                            },
+                                            {
+                                                "categoryId": "5f4f5967d7c06360889a639a",
+                                                "categoryName": "Kategori Test Homepage",
+                                                "categoryLevel": 0,
+                                                "categoryImage": null,
+                                                "categoryImageFileName": "pm_category_200902_4HbL.png",
+                                                "parentId": null,
+                                                "status": 27,
+                                                "createdBy": null,
+                                                "updatedBy": 1157445,
+                                                "createdAt": "Wed Sep 02 15:35:51 WIB 2020",
+                                                "updatedAt": "Wed Sep 02 16:09:34 WIB 2020",
+                                                "category": null,
+                                                "subCategory": null,
+                                                "createdByMail": "saiful.fahmi@alfacart.com",
+                                                "updatedByMail": "saiful.fahmi@alfacart.com"
+                                            }
+                                        ]
+                                     }   
+                                    },
+                                    "Success_parent_id": {
+                                        "value": {
+                                            "message": "Success",
+                                            "status": 1,
+                                            "data": [
+                                                {
+                                                    "categoryId": "5b857288a3834cdebbbc438b",
+                                                    "categoryName": "Bahan Masakan & Kue",
+                                                    "categoryLevel": 1,
+                                                    "categoryImage": null,
+                                                    "categoryImageFileName": "pm_category_180916_Rn8Z.jpg",
+                                                    "parentId": "5b85712ca3834cdebbbc4363",
+                                                    "status": 26,
+                                                    "createdBy": null,
+                                                    "updatedBy": 342849,
+                                                    "createdAt": "Fri Aug 10 07:00:01 WIB 2018",
+                                                    "updatedAt": "Tue Sep 25 15:21:06 WIB 2018",
+                                                    "category": null,
+                                                    "subCategory": null,
+                                                    "createdByMail": null,
+                                                    "updatedByMail": "adrian.davin94@gmail.com"
+                                                },
+                                                {
+                                                    "categoryId": "5b857288a3834cdebbbc4389",
+                                                    "categoryName": "Perlengkapan Dapur & Ruang Makan",
+                                                    "categoryLevel": 1,
+                                                    "categoryImage": null,
+                                                    "categoryImageFileName": "pm_category_180916_K4su.jpg",
+                                                    "parentId": "5b85712ca3834cdebbbc4363",
+                                                    "status": 26,
+                                                    "createdBy": null,
+                                                    "updatedBy": 1028461,
+                                                    "createdAt": "Fri Aug 10 07:00:01 WIB 2018",
+                                                    "updatedAt": "Wed Jul 24 16:02:31 WIB 2019",
+                                                    "category": null,
+                                                    "subCategory": null,
+                                                    "createdByMail": null,
+                                                    "updatedByMail": "benny.chandra@alfacart.com"
+                                                }
+                                            ]
+                                         }   
+                                    },
+                                    "Success_id": {
+                                        "value": {
+                                            "message": "Success",
+                                            "status": 1,
+                                            "data": {
+                                                "categoryId": "5b85712ca3834cdebbbc436b",
+                                                "categoryName": "Kebutuhan Rumah",
+                                                "categoryLevel": 0,
+                                                "categoryImage": null,
+                                                "categoryImageFileName": "pm_category_190116_FHBT.png",
+                                                "parentId": null,
+                                                "status": 26,
+                                                "createdBy": null,
+                                                "updatedBy": 1157445,
+                                                "createdAt": "Fri Aug 10 07:00:01 WIB 2018",
+                                                "updatedAt": "Fri Jul 17 10:08:04 WIB 2020",
+                                                "category": null,
+                                                "subCategory": null,
+                                                "createdByMail": null,
+                                                "updatedByMail": "saiful.fahmi@alfacart.com"
+                                            }
+                                        }   
+                                    }
+                                }
+                            }
+                        },
+                        "description": "server is processing the message"
+                    }
+                }
+            }
+        },
+        "/saveUpdate": {
+            "post": {
+                "tags": [
+                    "BO Product Main Category"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                            },
+                            "examples": {
+                                "Success": {
+                                    "value": {
+                                        "categoryId": "",
+                                        "categoryName": "test category",
+                                        "categoryLevel": 0,
+                                        "categoryImage": null,
+                                        "categoryImageFileName": null,
+                                        "parentId": null,
+                                        "status": 26,
+                                        "createdBy": null,
+                                        "updatedBy": null,
+                                        "createdAt": null,
+                                        "updatedAt": null,
+                                        "category": null,
+                                        "subCategory": null,
+                                        "createdByMail": "farried.fitri@alfacart.com",
+                                        "updatedByMail": null
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                "200": {
+                  "content": {
+                    "application/json": {
+                      "examples": {
+                        "Success": {
+                          "value": {
+                            "message": "Success",
+                            "status": 1,
+                            "data": {
+                                "categoryId": "63106a72daa1ee1fda089f16",
+                                "categoryName": "test category",
+                                "categoryLevel": 0,
+                                "categoryImage": null,
+                                "categoryImageFileName": null,
+                                "parentId": null,
+                                "status": 26,
+                                "createdBy": null,
+                                "updatedBy": null,
+                                "createdAt": "Thu Sep 01 15:16:49 WIB 2022",
+                                "updatedAt": null,
+                                "category": null,
+                                "subCategory": null,
+                                "createdByMail": "farried.fitri@alfacart.com",
+                                "updatedByMail": null
+                            }
+                          }
+                        },
+                        "Failed": {
+                          "value": {}
+                        }
+                      }
+                    }
+                  },
+                  "description": "server is processing the message"
+                }
+                },
+                "parameters": [
+                    {
+                    "$ref": "#/components/parameters/Content-Type"
+                    },
+                    {
+                        "in" :"query",
+                        "name": "userId",
+                        "schema" : {
+                            "type": "integer"
+                        },
+                        "description": "User ID"
+                    }
+                ]
+            }
+        },
+        "/delete": {
+            "delete": {
+                "parameters": [
+                    {
+                    "$ref": "#/components/parameters/Content-Type"
+                    },
+                    {
+                        "in" :"query",
+                        "name": "categoryId",
+                        "schema" : {
+                            "type": "integer"
+                        },
+                        "description": "Category ID"
+                    }
+                ],
+                "tags": [
+                    "BO Product Main Category"
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "examples": {
+                                    "Success": {
+                                    "value": {
+                                        "message": "Success",
+                                        "status": 1,
+                                        "data": "Empty Result"
+                                    }   
+                                }
+                            }
+                            }
+                        },
+                        "description": "server is processing the message"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "parameters": {
+            "Content-Type": {
+              "examples": {
+                "Content-Type": {
+                  "value": "\"application/json\""
+                }
+              },
+              "name": "Content-Type",
+              "description": "Content Type",
+              "schema": {
+                "type": "string"
+              },
+              "in": "header",
+              "required": true
+            }
+        }
+    },
+    "security": [
+    ]
+  }
